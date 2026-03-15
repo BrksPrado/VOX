@@ -1,16 +1,99 @@
-# React + Vite
+# VOX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <strong>Sua voz para melhorar a cidade.</strong>
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <img src="https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react" alt="React" />
+  <img src="https://img.shields.io/badge/Vite-8-646cff?style=flat-square&logo=vite" alt="Vite" />
+  <img src="https://img.shields.io/badge/Projeto%20Integrador-5-blue?style=flat-square" alt="Projeto Integrador 5" />
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Sobre o projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**VOX** é uma plataforma cidadã que conecta a **população** à **prefeitura**. O objetivo é permitir que moradores de uma cidade reportem problemas urbanos (buracos, iluminação quebrada, lixo, vandalismo, etc.) de forma simples e organizada, para que a administração municipal possa atender os chamados, direcionar a correção e dar retorno à vizinhança.
 
-## Expanding the ESLint configuration
+Assim, a prefeitura ganha visibilidade real dos problemas nas ruas e bairros, e o cidadão tem um canal direto para ser ouvido e ver as melhorias acontecerem.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Funcionalidades
+
+### Para o cidadão
+- **Registrar ocorrências**: reportar problemas na cidade com descrição, localização e fotos (quando aplicável).
+- **Acompanhar chamados**: ver o status do seu reporte (aberto, em análise, em execução, resolvido).
+- **Consultar histórico**: revisar problemas já reportados e respostas da prefeitura.
+
+### Para o administrador (prefeitura)
+- **Central de chamados**: visualizar todos os reportes enviados pela população.
+- **Atendimento e triagem**: analisar cada ocorrência, priorizar e direcionar para o setor responsável.
+- **Atualizar status**: informar andamento e conclusão, mantendo o cidadão informado.
+- **Gestão da vizinhança**: organizar e acompanhar a resolução dos problemas nos bairros.
+
+---
+
+## Tecnologias
+
+- **React** (v19) – interface e componentes
+- **Vite** (v8) – build e desenvolvimento
+- **JavaScript (JSX)** – lógica e estrutura da aplicação
+
+---
+
+## Pré-requisitos
+
+- [Node.js](https://nodejs.org/) (versão LTS recomendada)
+- npm ou yarn
+
+---
+
+## Como executar
+
+### Instalar dependências
+
+```bash
+npm install
+```
+
+### Rodar em modo desenvolvimento
+
+```bash
+npm run dev
+```
+
+Acesse no navegador o endereço indicado no terminal (geralmente `http://localhost:5173`).
+
+### Build para produção
+
+```bash
+npm run build
+```
+
+### Visualizar build de produção
+
+```bash
+npm run preview
+```
+
+---
+
+---
+
+## Projeto Integrador 5
+
+Este repositório corresponde ao **Projeto Integrador 5**, desenvolvido em **React**, com foco em uma solução que beneficie a comunidade e a gestão pública municipal através do VOX.
+
+---
+
+## Licença
+
+Projeto de uso educacional / Projeto Integrador.
+
+---
+
+<p align="center">
+  <em>VOX — Sua voz para melhorar a cidade.</em>
+</p>
