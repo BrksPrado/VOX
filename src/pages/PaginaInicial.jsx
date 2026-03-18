@@ -1,9 +1,9 @@
 import React from "react";
-import "./PaginaInicial.css";
+import "../styles/PaginaInicial.css";
 
 function PaginaInicial() {
   return (
-    <div class="paginaInicial">
+    <div className="paginaInicial">
       <h1>Página Inicial - VOX</h1>
     </div>
   );
