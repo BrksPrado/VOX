@@ -1,0 +1,30 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.welcome-text {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+}
+
+.app-container button {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.app-container button:hover {
+  background-color: #0056b3;
+}
