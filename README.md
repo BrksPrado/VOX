@@ -80,6 +80,7 @@ npm run preview
 
 ---
 
+<<<<<<< HEAD
 ## Estrutura do projeto (resumo)
 
 ```
@@ -93,6 +94,8 @@ VOX/
 └── README.md
 ```
 
+=======
+>>>>>>> 78943ad6cc013ce74603d83fe6016c575f8e1a9d
 ---
 
 ## Projeto Integrador 5
