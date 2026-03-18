@@ -1,12 +1,16 @@
-import './App.css'
+import "./App.css";
+import React, { useState } from "react";
+import Login from "./components/Login";
+import PaginaInicial from "./components/PaginaInicial";
 
 function App() {
+  const [logado, setLogado] = useState(false);
 
   return (
-    <div class="hellozada">
-      <h1>hello vox</h1>
+    <div>
+      {logado ? (<PaginaInicial />) : (<Login onLogin={() => setLogado(true)} /> )}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

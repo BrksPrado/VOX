@@ -1,0 +1,25 @@
+.login-container {
+  max-width: 300px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.login-title {
+  margin-bottom: 10px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login-input {
+  padding: 6px;
+}
+
+.login-button {
+  padding: 6px;
+  cursor: pointer;
+}
