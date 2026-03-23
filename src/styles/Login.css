@@ -1,13 +1,13 @@
 .login-page {
   min-height: 100vh; display: flex; align-items: center; justify-content: center;
-  background: radial-gradient(ellipse 70% 60% at 50% 30%, rgba(124,58,237,.2) 0%, transparent 70%);
+  background: radial-gradient(ellipse 70% 60% at 50% 30%, rgba(73,160,120,.18) 0%, transparent 70%);
   padding: 1.5rem;
 }
 
 .login-card {
   background: var(--card); border: 1px solid var(--bdr); border-radius: var(--r);
   padding: 2.5rem 2rem; width: 100%; max-width: 380px;
-  box-shadow: 0 8px 32px rgba(124,58,237,.18);
+  box-shadow: 0 8px 32px rgba(73,160,120,.15);
 }
 
 .login-logo { text-align: center; font-size: 2rem; font-weight: 900; letter-spacing: 4px; color: var(--pl); }

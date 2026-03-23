@@ -1,16 +1,16 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --p: #7c3aed;
-  --pd: #5b21b6;
-  --pl: #a78bfa;
-  --ac: #c4b5fd;
-  --bg: #0f0a1e;
-  --card: #1a1030;
-  --surf: #231845;
-  --txt: #f1f0f5;
-  --mut: #a09ab8;
-  --bdr: #3b2f6e;
+  --p: #49a078;
+  --pd: #357a5a;
+  --pl: #9cc5a1;
+  --ac: #9cc5a1;
+  --bg: #023618;
+  --card: #042e15;
+  --surf: #063d1c;
+  --txt: #dce1de;
+  --mut: #7aab88;
+  --bdr: #1a5c35;
   --r: 14px;
 }
 
@@ -18,7 +18,7 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); co
 
 /* ── botões entrar e criar conta ── */
 .btn { padding: 0.65rem 1.6rem; border-radius: 50px; font-weight: 700; font-size: 0.95rem; cursor: pointer; border: none; transition: all 0.2s; }
-.btn-filled { background: var(--p); color: #fff; box-shadow: 0 4px 20px rgba(124,58,237,.35); }
+.btn-filled { background: var(--p); color: #fff; box-shadow: 0 4px 20px rgba(73,160,120,.35); }
 .btn-filled:hover { background: var(--pd); transform: translateY(-1px); }
 .btn-ghost { background: transparent; color: var(--mut); border: 2px solid var(--bdr); }
 .btn-ghost:hover { border-color: var(--pl); color: var(--pl); }
@@ -29,7 +29,7 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); co
 .home-nav {
   display: flex; align-items: center; justify-content: space-between;
   padding: 1.25rem 2.5rem; border-bottom: 1px solid var(--bdr);
-  background: rgba(15,10,30,.85); backdrop-filter: blur(10px);
+  background: rgba(2,54,24,.9); backdrop-filter: blur(10px);
   position: sticky; top: 0; z-index: 10;
 }
 
@@ -39,11 +39,11 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); co
 .home-hero {
   flex: 1; display: flex; flex-direction: column; align-items: center;
   justify-content: center; text-align: center; padding: 5rem 1.5rem 3rem;
-  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(124,58,237,.2) 0%, transparent 70%);
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(73,160,120,.18) 0%, transparent 70%);
 }
 
 .hero-badge {
-  display: inline-block; background: rgba(124,58,237,.2); border: 1px solid var(--p);
+  display: inline-block; background: rgba(73,160,120,.18); border: 1px solid var(--p);
   color: var(--ac); font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px;
   text-transform: uppercase; padding: 0.35rem 1rem; border-radius: 50px; margin-bottom: 1.5rem;
 }
