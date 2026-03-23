@@ -1,30 +1,71 @@
-.app-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  text-align: center;
-  gap: 1.5rem;
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --p: #7c3aed;
+  --pd: #5b21b6;
+  --pl: #a78bfa;
+  --ac: #c4b5fd;
+  --bg: #0f0a1e;
+  --card: #1a1030;
+  --surf: #231845;
+  --txt: #f1f0f5;
+  --mut: #a09ab8;
+  --bdr: #3b2f6e;
+  --r: 14px;
 }
 
-.welcome-text {
-  font-size: 2rem;
-  color: #333;
-  margin: 0;
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--txt); min-height: 100vh; }
+
+/* ── botões entrar e criar conta ── */
+.btn { padding: 0.65rem 1.6rem; border-radius: 50px; font-weight: 700; font-size: 0.95rem; cursor: pointer; border: none; transition: all 0.2s; }
+.btn-filled { background: var(--p); color: #fff; box-shadow: 0 4px 20px rgba(124,58,237,.35); }
+.btn-filled:hover { background: var(--pd); transform: translateY(-1px); }
+.btn-ghost { background: transparent; color: var(--mut); border: 2px solid var(--bdr); }
+.btn-ghost:hover { border-color: var(--pl); color: var(--pl); }
+
+/* ── Home ── */
+.home-wrapper { min-height: 100vh; display: flex; flex-direction: column; }
+
+.home-nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.25rem 2.5rem; border-bottom: 1px solid var(--bdr);
+  background: rgba(15,10,30,.85); backdrop-filter: blur(10px);
+  position: sticky; top: 0; z-index: 10;
 }
 
-.app-container button {
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.home-logo { font-size: 1.6rem; font-weight: 900; letter-spacing: 3px; color: var(--pl); }
+.home-logo span { color: var(--ac); }
+
+.home-hero {
+  flex: 1; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; text-align: center; padding: 5rem 1.5rem 3rem;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(124,58,237,.2) 0%, transparent 70%);
 }
 
-.app-container button:hover {
-  background-color: #0056b3;
+.hero-badge {
+  display: inline-block; background: rgba(124,58,237,.2); border: 1px solid var(--p);
+  color: var(--ac); font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; padding: 0.35rem 1rem; border-radius: 50px; margin-bottom: 1.5rem;
 }
+
+.hero-title { font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 900; line-height: 1.15; margin-bottom: 1.25rem; }
+.hero-title .highlight { color: var(--pl); }
+.hero-sub { font-size: 1.05rem; color: var(--mut); max-width: 500px; line-height: 1.7; margin-bottom: 2.5rem; }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+
+.home-features {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem; padding: 3rem 2.5rem 4rem; max-width: 900px; margin: 0 auto; width: 100%;
+}
+
+.feature-card {
+  background: var(--card); border: 1px solid var(--bdr); border-radius: var(--r);
+  padding: 1.75rem 1.5rem; text-align: center; transition: border-color .2s, transform .2s;
+}
+
+.feature-card:hover { border-color: var(--pl); transform: translateY(-3px); }
+.feature-card svg { color: var(--pl); margin-bottom: 0.75rem; }
+.feature-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+.feature-card p { font-size: 0.875rem; color: var(--mut); line-height: 1.6; }
+
+.home-footer { text-align: center; padding: 1.5rem; border-top: 1px solid var(--bdr); color: var(--mut); font-size: 0.82rem; }

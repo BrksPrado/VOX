@@ -1,10 +1,50 @@
-.paginaInicial {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: rgb(233, 233, 233);
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    font-size: 30px;
+.dashboard { min-height: 100vh; display: flex; flex-direction: column; }
+
+.dash-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 2rem; background: var(--card); border-bottom: 1px solid var(--bdr);
 }
+
+.dash-logo { font-size: 1.4rem; font-weight: 900; letter-spacing: 3px; color: var(--pl); }
+
+.dash-user { display: flex; align-items: center; gap: 0.75rem; color: var(--mut); font-size: 0.9rem; }
+
+.dash-avatar {
+  width: 34px; height: 34px; border-radius: 50%; background: var(--p);
+  display: flex; align-items: center; justify-content: center; color: #fff;
+}
+
+.btn-sair {
+  display: flex; align-items: center; gap: 0.4rem;
+  padding: 0.45rem 1rem; border-radius: 50px; border: 1px solid var(--bdr);
+  background: transparent; color: var(--mut); font-size: 0.85rem; font-weight: 600;
+  cursor: pointer; transition: all .2s;
+}
+.btn-sair:hover { border-color: #ef4444; color: #ef4444; }
+
+.dash-body { flex: 1; padding: 2rem; max-width: 1100px; margin: 0 auto; width: 100%; }
+
+.dash-welcome { margin-bottom: 2rem; }
+.dash-welcome h1 { font-size: 1.6rem; font-weight: 800; }
+.dash-welcome p { color: var(--mut); margin-top: 0.3rem; font-size: 0.95rem; }
+
+.dash-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+
+.stat-card {
+  background: var(--card); border: 1px solid var(--bdr); border-radius: var(--r);
+  padding: 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 0.3rem;
+}
+.stat-card .stat-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--mut); }
+.stat-card .stat-value { font-size: 2rem; font-weight: 900; color: var(--pl); }
+.stat-card .stat-desc { font-size: 0.8rem; color: var(--mut); }
+
+.dash-actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+
+.action-card {
+  background: var(--card); border: 1px solid var(--bdr); border-radius: var(--r);
+  padding: 1.5rem; cursor: pointer; transition: border-color .2s, transform .2s;
+}
+.action-card:hover { border-color: var(--pl); transform: translateY(-2px); }
+.action-card svg { color: var(--pl); margin-bottom: 0.75rem; }
+.action-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; }
+.action-card p { font-size: 0.85rem; color: var(--mut); line-height: 1.5; }

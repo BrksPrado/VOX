@@ -1,4 +1,4 @@
-import Home from '../pages/Home';  // ← novo
+import Home from '../pages/Home';
 import Login from '../pages/Login';
 import PaginaInicial from '../pages/PaginaInicial';
 
