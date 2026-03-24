@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { MapPin, Bell, Building2 } from "lucide-react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function Home() {
   const navigate = useNavigate();
@@ -12,10 +14,7 @@ function Home() {
 
   return (
     <div className="home-wrapper">
-      <nav className="home-nav">
-        <div className="home-logo">V<span>O</span>X</div>
-        <button className="btn btn-filled" onClick={() => navigate("/login")}>Entrar</button>
-      </nav>
+      <Navbar />
 
       <section className="home-hero">
         <span className="hero-badge">Plataforma Cidadã</span>
@@ -42,9 +41,7 @@ function Home() {
         ))}
       </section>
 
-      <footer className="home-footer">
-        © {new Date().getFullYear()} VOX — Sua voz para melhorar a cidade.
-      </footer>
+      <Footer />
     </div>
   );
 }

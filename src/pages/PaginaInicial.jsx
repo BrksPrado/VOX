@@ -1,9 +1,8 @@
-import { useNavigate } from "react-router-dom";
-import { FilePlus, ClipboardList, Map, UserCircle, LogOut } from "lucide-react";
+import { FilePlus, ClipboardList, Map, UserCircle } from "lucide-react";
+import DashHeader from "../components/DashHeader";
 import "../styles/PaginaInicial.css";
 
 function PaginaInicial() {
-  const navigate = useNavigate();
   const stats = [
     { label: "Chamados Abertos", value: "0", desc: "Nenhum chamado ainda" },
     { label: "Em Andamento", value: "0", desc: "Aguardando atualização" },
@@ -19,16 +18,7 @@ function PaginaInicial() {
 
   return (
     <div className="dashboard">
-      <header className="dash-header">
-        <div className="dash-logo">VOX</div>
-        <div className="dash-user">
-          <div className="dash-avatar"><UserCircle size={20} /></div>
-          Cidadão
-          <button className="btn-sair" onClick={() => navigate("/")}>
-            <LogOut size={16} /> Sair
-          </button>
-        </div>
-      </header>
+      <DashHeader />
 
       <main className="dash-body">
         <div className="dash-welcome">
