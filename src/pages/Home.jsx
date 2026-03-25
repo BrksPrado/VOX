@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { MapPin, Bell, Building2 } from "lucide-react";
-import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 function Home() {
@@ -14,7 +14,7 @@ function Home() {
 
   return (
     <div className="home-wrapper">
-      <Navbar />
+      <Header variant="public" />
 
       <section className="home-hero">
         <span className="hero-badge">Plataforma Cidadã</span>

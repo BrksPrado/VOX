@@ -1,0 +1,25 @@
+.header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 2.5rem;
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--header-bdr);
+  box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  position: sticky; top: 0; z-index: 10;
+}
+
+.header-logo { height: 44px; width: auto; cursor: pointer; }
+
+.header-user { display: flex; align-items: center; gap: 0.75rem; color: var(--header-mut); font-size: 0.9rem; }
+
+.header-avatar {
+  width: 34px; height: 34px; border-radius: 50%; background: var(--p);
+  display: flex; align-items: center; justify-content: center; color: #fff;
+}
+
+.btn-sair {
+  display: flex; align-items: center; gap: 0.4rem;
+  padding: 0.45rem 1rem; border-radius: 50px; border: 1px solid var(--header-bdr);
+  background: transparent; color: var(--header-mut); font-size: 0.85rem; font-weight: 600;
+  cursor: pointer; transition: all .2s;
+}
+.btn-sair:hover { border-color: #ef4444; color: #ef4444; }

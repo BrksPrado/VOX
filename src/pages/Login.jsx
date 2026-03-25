@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import logo from "../assets/logo.png";
 import "../styles/Login.css";
 
 function Login() {
@@ -17,7 +18,7 @@ function Login() {
   return (
     <div className="login-page">
       <div className="login-card">
-        <div className="login-logo">VOX</div>
+        <img src={logo} alt="VOX" className="login-logo"></img>
         <p className="login-tagline">Sua voz para melhorar a cidade</p>
 
         <h2>Acessar conta</h2>

@@ -1,5 +1,5 @@
 import { FilePlus, ClipboardList, Map, UserCircle } from "lucide-react";
-import DashHeader from "../components/DashHeader";
+import Header from "../components/Header";
 import "../styles/PaginaInicial.css";
 
 function PaginaInicial() {
@@ -18,7 +18,7 @@ function PaginaInicial() {
 
   return (
     <div className="dashboard">
-      <DashHeader />
+      <Header variant="dash" />
 
       <main className="dash-body">
         <div className="dash-welcome">
