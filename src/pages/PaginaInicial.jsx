@@ -4,9 +4,9 @@ import "../styles/PaginaInicial.css";
 
 function PaginaInicial() {
   const stats = [
-    { label: "Chamados Abertos", value: "0", desc: "Nenhum chamado ainda" },
-    { label: "Em Andamento", value: "0", desc: "Aguardando atualização" },
-    { label: "Resolvidos", value: "0", desc: "Problemas solucionados" },
+    { label: "Chamados Abertos", value: "138", desc: "Nenhum chamado ainda" },
+    { label: "Em Andamento", value: "72", desc: "Aguardando atualização" },
+    { label: "Resolvidos", value: "66", desc: "Problemas solucionados" },
   ];
 
   const actions = [
