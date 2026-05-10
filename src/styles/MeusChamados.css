@@ -1,0 +1,99 @@
+.meus-chamados-page { min-height: 100vh; display: flex; flex-direction: column; }
+
+.meus-chamados-body {
+  flex: 1; padding: 2rem 1.5rem 4rem;
+  max-width: 860px; margin: 0 auto; width: 100%;
+}
+
+.meus-chamados-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;
+}
+.meus-chamados-header h1 { font-size: 1.6rem; font-weight: 900; }
+.meus-chamados-header p { color: var(--mut); font-size: 0.9rem; margin-top: 0.2rem; }
+
+.btn-novo {
+  display: flex; align-items: center; gap: 0.4rem;
+  padding: 0.65rem 1.25rem; background: var(--p); color: #fff;
+  border: none; border-radius: 10px; font-size: 0.875rem; font-weight: 700;
+  cursor: pointer; transition: background .2s, transform .15s;
+  box-shadow: 0 4px 14px rgba(34,197,94,.3); white-space: nowrap;
+}
+.btn-novo:hover { background: var(--pd); transform: translateY(-1px); }
+
+/* ── Estados ── */
+.chamados-estado {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 0.75rem; padding: 4rem 1rem;
+  color: var(--mut); text-align: center;
+}
+.chamados-estado.erro { color: #f87171; }
+.spin { animation: girar 1s linear infinite; }
+@keyframes girar { to { transform: rotate(360deg); } }
+
+.chamados-vazio {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 0.75rem; padding: 4rem 1rem; text-align: center;
+}
+.vazio-icone { color: var(--bdr); margin-bottom: 0.5rem; }
+.chamados-vazio h3 { font-size: 1.1rem; font-weight: 700; }
+.chamados-vazio p { color: var(--mut); font-size: 0.9rem; margin-bottom: 0.5rem; }
+
+/* ── Lista esteira ── */
+.chamados-lista {
+  display: flex; flex-direction: column; gap: 0.75rem;
+}
+
+.chamado-item {
+  display: flex; align-items: center; gap: 1rem;
+  background: var(--card); border: 1.5px solid var(--bdr); border-radius: 14px;
+  padding: 1.1rem 1.25rem; cursor: pointer;
+  transition: border-color .2s, transform .15s, box-shadow .2s;
+}
+.chamado-item:hover {
+  border-color: rgba(34,197,94,.45);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0,0,0,.3);
+}
+
+.chamado-item-numero {
+  font-size: 0.75rem; font-weight: 800; color: var(--mut);
+  min-width: 28px; text-align: center;
+}
+
+.chamado-item-info { flex: 1; min-width: 0; }
+.chamado-item-desc {
+  font-size: 0.95rem; font-weight: 600; color: var(--txt);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  margin-bottom: 0.35rem;
+}
+.chamado-item-meta {
+  display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+}
+.chamado-item-local {
+  font-size: 0.78rem; color: var(--mut);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 320px;
+}
+.chamado-item-data {
+  display: flex; align-items: center; gap: 0.3rem;
+  font-size: 0.75rem; color: var(--mut); white-space: nowrap;
+}
+
+.chamado-item-direita {
+  display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem;
+}
+
+/* ── Status badges ── */
+.chamado-status {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: .4px;
+  padding: 0.25rem 0.7rem; border-radius: 50px; white-space: nowrap;
+}
+.status-aberto     { background: rgba(251,191,36,.12);  color: #fbbf24; border: 1px solid rgba(251,191,36,.3); }
+.status-andamento  { background: rgba(59,130,246,.12);  color: #60a5fa; border: 1px solid rgba(59,130,246,.3); }
+.status-resolvido  { background: rgba(34,197,94,.12);   color: #4ade80; border: 1px solid rgba(34,197,94,.3); }
+
+.chamado-midia-badge {
+  font-size: 0.72rem; color: var(--mut);
+}
+.chamado-seta { color: var(--mut); margin-top: 0.2rem; }

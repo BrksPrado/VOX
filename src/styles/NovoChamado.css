@@ -1,0 +1,174 @@
+.chamado-page { min-height: 100vh; display: flex; flex-direction: column; background: var(--bg); }
+
+.chamado-body {
+  flex: 1;
+  padding: 2.5rem 1.5rem 4rem;
+  max-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Título centralizado igual ao protótipo */
+.chamado-titulo {
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--txt);
+}
+
+/* ── Formulário ── */
+.chamado-form { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.campo-grupo { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.campo-label {
+  font-size: 0.82rem; font-weight: 700;
+  color: var(--mut); letter-spacing: .4px;
+}
+.obrig { color: #f87171; }
+.campo-opt { font-size: 0.78rem; font-weight: 400; color: var(--mut); }
+
+/* Textarea */
+.chamado-textarea {
+  width: 100%; padding: 1rem; background: var(--card);
+  border: 1.5px solid var(--bdr); border-radius: 10px;
+  color: var(--txt); font-size: 0.95rem; font-family: inherit;
+  resize: vertical; outline: none; min-height: 120px;
+  transition: border-color .2s, box-shadow .2s;
+}
+.chamado-textarea:focus { border-color: var(--p); box-shadow: 0 0 0 3px rgba(34,197,94,.12); }
+.chamado-textarea::placeholder { color: var(--mut); opacity: .55; }
+
+/* ── Mídia ── */
+.midia-area {
+  background: var(--card); border: 1.5px solid var(--bdr);
+  border-radius: 10px; overflow: hidden;
+}
+
+.btn-adicionar-fotos {
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  width: 100%; padding: 0.75rem;
+  background: rgba(34,197,94,.08); border: none; border-bottom: 1.5px solid var(--bdr);
+  color: var(--p); font-size: 0.9rem; font-weight: 700;
+  cursor: pointer; transition: background .2s;
+}
+.btn-adicionar-fotos:hover { background: rgba(34,197,94,.15); }
+
+.midia-drop {
+  padding: 2rem 1rem; text-align: center;
+  color: var(--mut); font-size: 0.88rem; cursor: pointer;
+}
+.midia-drop:hover { color: var(--txt); }
+
+.midia-preview-grid {
+  display: flex; flex-wrap: wrap; gap: 0.6rem; padding: 0.75rem;
+}
+.midia-thumb {
+  position: relative; width: 90px; height: 90px;
+  border-radius: 8px; overflow: hidden; border: 1.5px solid var(--bdr);
+}
+.midia-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.midia-remove {
+  position: absolute; top: 3px; right: 3px;
+  background: rgba(0,0,0,.75); border: none; border-radius: 50%;
+  width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;
+  color: #fff; cursor: pointer; transition: background .2s;
+}
+.midia-remove:hover { background: #ef4444; }
+
+/* ── Localização ── */
+.local-input-wrap {
+  position: relative; display: flex; align-items: center;
+}
+.local-icon {
+  position: absolute; left: 0.9rem; color: var(--mut); pointer-events: none;
+}
+.chamado-input {
+  width: 100%; padding: 0.85rem 1rem 0.85rem 2.5rem;
+  background: var(--card); border: 1.5px solid var(--bdr);
+  border-radius: 10px; color: var(--txt); font-size: 0.95rem; outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.chamado-input:focus { border-color: var(--p); box-shadow: 0 0 0 3px rgba(34,197,94,.12); }
+.chamado-input::placeholder { color: var(--mut); opacity: .55; }
+
+/* Mapa */
+.mapa-container {
+  margin-top: 0.6rem; border-radius: 10px; overflow: hidden;
+  border: 1.5px solid var(--bdr); height: 260px;
+}
+.mapa-leaflet { width: 100%; height: 100%; }
+.mapa-iframe { width: 100%; height: 100%; border: none; display: block; }
+.mapa-placeholder {
+  width: 100%; height: 100%; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 0.5rem;
+  background: var(--card); color: var(--mut);
+}
+.mapa-placeholder-icon { opacity: .4; }
+.mapa-placeholder p { font-size: 0.82rem; opacity: .6; text-align: center; }
+
+/* Botão GPS */
+.btn-gps {
+  display: flex; align-items: center; justify-content: center; gap: 0.4rem;
+  margin-top: 0.6rem; padding: 0.65rem 1rem; width: 100%;
+  border-radius: 8px; border: 1.5px solid var(--bdr);
+  background: transparent; color: var(--mut);
+  font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all .2s;
+}
+.btn-gps:hover:not(:disabled) { border-color: var(--p); color: var(--p); background: rgba(34,197,94,.06); }
+.btn-gps:disabled { opacity: .5; cursor: not-allowed; }
+
+/* ── Erro ── */
+.chamado-erro {
+  font-size: 0.82rem; color: #f87171; background: rgba(248,113,113,.1);
+  border: 1px solid rgba(248,113,113,.25); border-radius: 8px;
+  padding: 0.6rem 0.9rem; text-align: center;
+}
+
+/* ── Ações centralizadas ── */
+.chamado-acoes {
+  display: flex; flex-direction: column; align-items: center; gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.btn-enviar {
+  width: 100%; padding: 1rem;
+  background: var(--p); color: #fff;
+  border: none; border-radius: 10px;
+  font-size: 1rem; font-weight: 700;
+  cursor: pointer; transition: background .2s, transform .15s, box-shadow .2s;
+  box-shadow: 0 4px 16px rgba(34,197,94,.3);
+}
+.btn-enviar:hover:not(:disabled) { background: var(--pd); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(34,197,94,.4); }
+.btn-enviar:disabled { opacity: .4; cursor: not-allowed; }
+
+.chamado-links {
+  display: flex; align-items: center; gap: 0.75rem; width: 100%;
+}
+
+.btn-secundario {
+  flex: 1; padding: 0.75rem 1rem;
+  border-radius: 10px; border: 1.5px solid var(--bdr);
+  background: transparent; color: var(--mut);
+  font-size: 0.875rem; font-weight: 600; cursor: pointer;
+  transition: all .2s; text-align: center;
+}
+.btn-secundario:hover { border-color: var(--p); color: var(--p); background: rgba(34,197,94,.06); }
+
+.btn-cancelar {
+  flex: 1; padding: 0.75rem 1rem;
+  border-radius: 10px; border: 1.5px solid var(--bdr);
+  background: transparent; color: var(--mut);
+  font-size: 0.875rem; font-weight: 600; cursor: pointer;
+  transition: all .2s; text-align: center;
+}
+.btn-cancelar:hover { border-color: #ef4444; color: #ef4444; background: rgba(239,68,68,.06); }
+
+.link-btn {
+  background: none; border: none; color: var(--mut);
+  font-size: 0.875rem; cursor: pointer; text-decoration: underline;
+  text-underline-offset: 3px; transition: color .2s; padding: 0;
+}
+.link-btn:hover { color: var(--p); }
+.link-sep { color: var(--mut); opacity: .4; }

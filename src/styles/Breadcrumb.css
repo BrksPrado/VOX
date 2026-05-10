@@ -1,0 +1,24 @@
+.breadcrumb {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 0.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.bc-grupo { display: flex; align-items: center; gap: 0.1rem; }
+
+.bc-sep { color: var(--mut); opacity: .5; flex-shrink: 0; }
+
+.bc-item {
+  display: flex; align-items: center; gap: 0.3rem;
+  font-size: 0.8rem; font-weight: 500; padding: 0.25rem 0.4rem;
+  border-radius: 6px; transition: all .15s;
+}
+
+.bc-link {
+  background: none; border: none; cursor: pointer;
+  color: var(--mut);
+}
+.bc-link:hover { color: var(--p); background: rgba(34,197,94,.08); }
+
+.bc-atual {
+  color: var(--txt); font-weight: 600; cursor: default;
+}
