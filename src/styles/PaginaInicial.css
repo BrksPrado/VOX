@@ -32,6 +32,9 @@
 .action-card.disabled { cursor: default; opacity: .6; }
 .action-card.disabled:hover { border-color: var(--bdr); transform: none; box-shadow: none; }
 .action-card.clickable { cursor: pointer; }
+.action-card.admin-card { border-color: rgba(139,92,246,.3); }
+.action-card.admin-card svg { color: #a78bfa; }
+.action-card.admin-card:hover { border-color: rgba(139,92,246,.6); }
 
 .action-badge {
   display: inline-block; margin-top: 0.6rem;

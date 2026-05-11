@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { doc, getDoc, collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
-import { ArrowLeft, MapPin, Clock, CheckCircle2, Loader2, AlertCircle, Image, ListOrdered } from "lucide-react";
+import { ArrowLeft, MapPin, Clock, CheckCircle2, Loader2, AlertCircle, Image, ListOrdered, XCircle } from "lucide-react";
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import L from "leaflet";
 import Header from "../components/Header";
@@ -21,6 +21,7 @@ const STATUS_CONFIG = {
   "Aberto":       { cor: "status-aberto",    icone: <AlertCircle size={15} />,  label: "Aberto" },
   "Em Andamento": { cor: "status-andamento", icone: <Loader2 size={15} />,      label: "Em Andamento" },
   "Resolvido":    { cor: "status-resolvido", icone: <CheckCircle2 size={15} />, label: "Resolvido" },
+  "Recusado":     { cor: "status-recusado",  icone: <XCircle size={15} />,      label: "Recusado" },
 };
 
 function formatarData(timestamp) {

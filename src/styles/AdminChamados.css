@@ -1,0 +1,158 @@
+.admin-page { min-height: 100vh; display: flex; flex-direction: column; }
+
+.admin-body {
+  flex: 1; padding: 2rem 1.5rem 4rem;
+  max-width: 960px; margin: 0 auto; width: 100%;
+}
+
+.admin-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;
+}
+.admin-header h1 { font-size: 1.6rem; font-weight: 900; }
+.admin-header p  { color: var(--mut); font-size: 0.9rem; margin-top: 0.2rem; }
+
+.admin-badge {
+  padding: 0.4rem 1rem; background: rgba(139,92,246,.15);
+  color: #a78bfa; border: 1px solid rgba(139,92,246,.3);
+  border-radius: 50px; font-size: 0.75rem; font-weight: 700;
+  white-space: nowrap; align-self: center;
+}
+
+.admin-lista { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.admin-item-wrap {
+  background: var(--card); border: 1.5px solid var(--bdr); border-radius: 14px;
+  overflow: hidden; transition: border-color .2s;
+}
+.admin-item-wrap.aberto { border-color: rgba(139,92,246,.4); }
+
+.admin-item {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 1.1rem 1.25rem;
+}
+
+.admin-item-numero {
+  font-size: 0.75rem; font-weight: 800; color: var(--mut);
+  min-width: 28px; text-align: center;
+}
+
+.admin-item-info { flex: 1; min-width: 0; }
+.admin-item-desc {
+  font-size: 0.95rem; font-weight: 600; color: var(--txt);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  margin-bottom: 0.35rem;
+}
+.admin-item-meta { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+.admin-item-local { font-size: 0.78rem; color: var(--mut); }
+.admin-item-data {
+  display: flex; align-items: center; gap: 0.3rem;
+  font-size: 0.75rem; color: var(--mut);
+}
+.admin-item-midia-badge {
+  display: flex; align-items: center; gap: 0.25rem;
+  font-size: 0.75rem; color: var(--mut);
+}
+
+.admin-item-direita {
+  display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;
+}
+
+.admin-btns { display: flex; gap: 0.4rem; flex-wrap: wrap; justify-content: flex-end; }
+
+/* ── Badges de status ── */
+.chamado-status {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: .4px;
+  padding: 0.25rem 0.7rem; border-radius: 50px; white-space: nowrap;
+}
+.status-aberto    { background: rgba(251,191,36,.12); color: #fbbf24; border: 1px solid rgba(251,191,36,.3); }
+.status-andamento { background: rgba(59,130,246,.12);  color: #60a5fa; border: 1px solid rgba(59,130,246,.3); }
+.status-resolvido { background: rgba(34,197,94,.12);   color: #4ade80; border: 1px solid rgba(34,197,94,.3); }
+.status-recusado  { background: rgba(239,68,68,.12);   color: #f87171; border: 1px solid rgba(239,68,68,.3); }
+
+/* ── Botões de ação ── */
+.btn-andamento, .btn-resolver, .btn-recusar {
+  display: flex; align-items: center; gap: 0.3rem;
+  padding: 0.35rem 0.75rem; border-radius: 8px;
+  font-size: 0.75rem; font-weight: 700; cursor: pointer; transition: background .2s;
+}
+.btn-andamento { background: rgba(59,130,246,.1); color: #60a5fa; border: 1px solid rgba(59,130,246,.3); }
+.btn-andamento:hover:not(:disabled) { background: rgba(59,130,246,.2); }
+.btn-resolver  { background: rgba(34,197,94,.1);  color: #4ade80; border: 1px solid rgba(34,197,94,.3); }
+.btn-resolver:hover:not(:disabled)  { background: rgba(34,197,94,.2); }
+.btn-recusar   { background: rgba(239,68,68,.1);  color: #f87171; border: 1px solid rgba(239,68,68,.3); }
+.btn-recusar:hover:not(:disabled)   { background: rgba(239,68,68,.2); }
+.btn-andamento:disabled, .btn-resolver:disabled, .btn-recusar:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.btn-expandir {
+  display: flex; align-items: center; gap: 0.3rem;
+  background: transparent; border: 1px solid var(--bdr);
+  color: var(--mut); padding: 0.3rem 0.75rem; border-radius: 8px;
+  font-size: 0.75rem; font-weight: 600; cursor: pointer; transition: all .2s;
+}
+.btn-expandir:hover { border-color: rgba(139,92,246,.4); color: #a78bfa; }
+
+/* ── Painel de detalhes ── */
+.admin-detalhe {
+  border-top: 1.5px solid var(--bdr);
+  padding: 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 1.25rem;
+  background: rgba(139,92,246,.03);
+}
+
+.admin-detalhe-secao { display: flex; flex-direction: column; gap: 0.5rem; }
+.admin-detalhe-label {
+  display: flex; align-items: center; gap: 0.35rem;
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .8px; color: var(--mut);
+}
+.admin-detalhe-texto {
+  font-size: 0.9rem; color: var(--txt); line-height: 1.6;
+  background: var(--card); border: 1px solid var(--bdr);
+  border-radius: 10px; padding: 0.85rem 1rem; white-space: pre-wrap;
+}
+
+/* ── Grid de mídias ── */
+.admin-midia-grid { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+.admin-midia-thumb {
+  position: relative; width: 110px; height: 110px;
+  border-radius: 10px; overflow: hidden;
+  border: 1.5px solid var(--bdr); cursor: pointer;
+}
+.admin-midia-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.admin-midia-play {
+  position: absolute; inset: 0; display: flex; align-items: center;
+  justify-content: center; color: #fff; pointer-events: none;
+}
+.admin-midia-overlay {
+  position: absolute; inset: 0; background: rgba(0,0,0,.4);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; color: #fff; opacity: 0; transition: opacity .2s;
+}
+.admin-midia-thumb:hover .admin-midia-overlay { opacity: 1; }
+
+/* ── Lightbox ── */
+.lightbox {
+  position: fixed; inset: 0; background: rgba(0,0,0,.9);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000; padding: 1.5rem; cursor: pointer;
+}
+.lightbox-fechar {
+  position: absolute; top: 1.25rem; right: 1.25rem;
+  background: rgba(255,255,255,.1); border: none; color: #fff;
+  width: 36px; height: 36px; border-radius: 50%; font-size: 1rem;
+  cursor: pointer; transition: background .2s;
+}
+.lightbox-fechar:hover { background: rgba(255,255,255,.2); }
+.lightbox-midia { max-width: 90vw; max-height: 85vh; border-radius: 10px; object-fit: contain; }
+
+/* ── Estados ── */
+.chamados-estado {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 0.75rem; padding: 4rem 1rem;
+  color: var(--mut); text-align: center;
+}
+.chamados-estado.erro { color: #f87171; }
+.spin { animation: girar 1s linear infinite; }
+@keyframes girar { to { transform: rotate(360deg); } }

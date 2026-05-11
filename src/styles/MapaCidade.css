@@ -1,0 +1,43 @@
+.mapa-page { min-height: 100vh; display: flex; flex-direction: column; }
+
+.mapa-body {
+  flex: 1; padding: 2rem 1.5rem 4rem;
+  max-width: 1100px; margin: 0 auto; width: 100%;
+}
+
+.mapa-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;
+}
+.mapa-header h1 { font-size: 1.6rem; font-weight: 900; }
+.mapa-header p  { color: var(--mut); font-size: 0.9rem; margin-top: 0.2rem; }
+
+.mapa-legenda { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; align-self: center; }
+.legenda-item { display: flex; align-items: center; gap: 0.35rem; font-size: 0.78rem; color: var(--mut); }
+.legenda-bolinha { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+.mapa-container {
+  width: 100%; height: 520px;
+  border-radius: 16px; overflow: hidden;
+  border: 1.5px solid var(--bdr);
+}
+.mapa-leaflet { width: 100%; height: 100%; }
+
+.mapa-contagem {
+  margin-top: 0.75rem; font-size: 0.82rem; color: var(--mut); text-align: right;
+}
+
+.mapa-estado {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 0.75rem; padding: 4rem 1rem;
+  color: var(--mut); text-align: center;
+}
+.mapa-estado.erro { color: #f87171; }
+.spin { animation: girar 1s linear infinite; }
+@keyframes girar { to { transform: rotate(360deg); } }
+
+/* Popup do Leaflet */
+.popup-conteudo { display: flex; flex-direction: column; gap: 0.3rem; min-width: 160px; }
+.popup-status { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
+.popup-desc { font-size: 0.85rem; color: #111; line-height: 1.4; margin: 0; }
+.popup-data { display: flex; align-items: center; gap: 0.3rem; font-size: 0.75rem; color: #666; }

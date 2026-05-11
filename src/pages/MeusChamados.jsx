@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db, auth } from "../firebase";
-import { FilePlus, ChevronRight, Clock, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
+import { FilePlus, ChevronRight, Clock, CheckCircle2, Loader2, AlertCircle, XCircle } from "lucide-react";
 import Header from "../components/Header";
 import Breadcrumb from "../components/Breadcrumb";
 import "../styles/MeusChamados.css";
@@ -11,6 +11,7 @@ const STATUS_CONFIG = {
   "Aberto":       { cor: "status-aberto",      icone: <AlertCircle size={14} /> },
   "Em Andamento": { cor: "status-andamento",   icone: <Loader2 size={14} /> },
   "Resolvido":    { cor: "status-resolvido",   icone: <CheckCircle2 size={14} /> },
+  "Recusado":     { cor: "status-recusado",    icone: <XCircle size={14} /> },
 };
 
 function formatarData(timestamp) {
