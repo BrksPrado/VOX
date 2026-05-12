@@ -41,3 +41,13 @@
 .popup-status { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
 .popup-desc { font-size: 0.85rem; color: #111; line-height: 1.4; margin: 0; }
 .popup-data { display: flex; align-items: center; gap: 0.3rem; font-size: 0.75rem; color: #666; }
+
+.popup-btn-ver {
+  display: flex; align-items: center; gap: 0.35rem;
+  margin-top: 0.4rem; padding: 0.35rem 0.6rem;
+  font-size: 0.75rem; font-weight: 600;
+  color: #fff; background: #08a81e;
+  border: none; border-radius: 6px; cursor: pointer;
+  transition: background 0.2s;
+}
+.popup-btn-ver:hover { background: #08a81d9d; }

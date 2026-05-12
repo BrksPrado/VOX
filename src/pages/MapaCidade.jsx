@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 import { MapContainer, TileLayer, CircleMarker, Popup } from "react-leaflet";
-import { Loader2, AlertCircle, Clock } from "lucide-react";
+import { Loader2, AlertCircle, Clock, Eye } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Breadcrumb from "../components/Breadcrumb";
 import "leaflet/dist/leaflet.css";
@@ -22,6 +23,7 @@ function formatarData(timestamp) {
 }
 
 function MapaCidade() {
+  const navigate = useNavigate();
   const [chamados, setChamados] = useState([]);
   const [carregando, setCarregando] = useState(true);
   const [erro, setErro] = useState("");
@@ -112,6 +114,9 @@ function MapaCidade() {
                         <span className="popup-data">
                           <Clock size={11} /> {formatarData(c.criadoEm)}
                         </span>
+                        <button className="popup-btn-ver" onClick={() => navigate(`/chamado/${c.id}`)}>
+                          <Eye size={12} /> Ver solicitação
+                        </button>
                       </div>
                     </Popup>
                   </CircleMarker>
